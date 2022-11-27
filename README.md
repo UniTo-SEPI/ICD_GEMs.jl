@@ -1,12 +1,15 @@
-# <img src="https://github.com/JuliaHealth/ICD_GEMs.jl/blob/main/docs/src/assets/logo.png?raw=true" width="50" height="40"> &nbsp; ICD_GEMs.jl 
+# ICD_GEMs.jl 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/JuliaHealth/ICD_GEMs.jl/blob/main/LICENSE)
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliahealth.org/ICD_GEMs.jl/stable)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliahealth.org/ICD_GEMs.jl/dev)
-[![Build Status](https://github.com/JuliaHealth/ICD_GEMs.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/JuliaHealth/ICD_GEMs.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/JuliaHealth/ICD_GEMs.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/JuliaHealth/ICD_GEMs.jl)
-[![Coverage](https://coveralls.io/repos/github/JuliaHealth/ICD_GEMs.jl/badge.svg?branch=main)](https://coveralls.io/github/JuliaHealth/ICD_GEMs.jl?branch=main)
+[![Dev](https://img.shields.io/badge/docs-dev-lightblue.svg)](https://juliahealth.org/ICD_GEMs.jl/dev)
+[![CI](https://github.com/JuliaHealth/ICD_GEMs.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/JuliaHealth/ICD_GEMs.jl/actions/workflows/CI.yml)
+[![Compat Helper](https://github.com/JuliaGraphs/MultilayerGraphs.jl/actions/workflows/CompatHelper.yml/badge.svg)](https://github.com/JuliaGraphs/MultilayerGraphs.jl/actions/workflows/CompatHelper.yml)
+[![Codecov Coverage](https://codecov.io/gh/JuliaHealth/ICD_GEMs.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/JuliaHealth/ICD_GEMs.jl)
+[![Coveralls Coverage](https://coveralls.io/repos/github/JuliaHealth/ICD_GEMs.jl/badge.svg?branch=main)](https://coveralls.io/github/JuliaHealth/ICD_GEMs.jl?branch=main)
 [![DOI](https://zenodo.org/badge/494094231.svg)](https://zenodo.org/badge/latestdoi/494094231)
+
+<img align="right" width="180" height="150" src="https://github.com/JuliaHealth/ICD_GEMs.jl/blob/main/docs/src/assets/logo.png?raw=true">
 
 ICD_GEMs.jl is a Julia package that allows to translate ICD-9 codes in ICD-10 and viceversa via the General Equivalence Mappings ([GEMs](https://www.asco.org/practice-policy/billing-coding-reporting/icd-10/general-equivalence-mappings-gems)) of the International Classification of Diseases ([ICD](https://www.who.int/standards/classifications/classification-of-diseases)).
 
@@ -73,7 +76,7 @@ gem       = get_GEM_dataframe_from_cdc_gem_txt(path, direction) # Or get_GEM_dic
 Finally, let us show how to translate ICD-10 codes into ICD-9 for, as an example, neoplasms:
 
 ```julia
-ICD_10_neoplasms = "C00-D48" # This is equivalent as explicitly specifiying all codes from C00.XX to D48.XX
+ICD_10_neoplasms = "C00-D48" # This is equivalent as explicitly specifying all codes from C00.XX to D48.XX
 ICD_9_neoplasm   = execute_applied_mapping(GEM_I10_I9_dictionary, ["C00-D48"])  
 ```
 
@@ -172,6 +175,12 @@ If you wish to change or add some functionality, please file an [issue](https://
 ## How to Cite 
 
 If you use this package in your work, please cite this repository using the metadata in [`CITATION.bib`](https://github.com/JuliaHealth/ICD_GEMs.jl/blob/main/CITATION.bib).
+
+## Announcements 
+
+- [Twitter](https://twitter.com/In_Phy_T/status/1529444377281671168?s=20&t=O7f9qRLdsyY8WM3TEdCWLg)
+- [Discourse](https://discourse.julialang.org/t/ann-icd-gems-jl-a-package-to-translate-between-icd-9-and-icd-10-codes/81679?u=pietromonticone)
+- [Forem](https://forem.julialang.org/inphyt/ann-icdgemsjl-a-package-to-translate-between-icd-9-and-icd-10-codes-17am)
 
 ## References 
 
